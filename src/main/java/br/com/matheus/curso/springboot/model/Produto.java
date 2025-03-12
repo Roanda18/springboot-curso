@@ -1,6 +1,7 @@
 package br.com.matheus.curso.springboot.model;
 
 import jakarta.persistence.*;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -8,7 +9,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "produto")
-public class Produto implements Serializable {
+public class Produto extends RepresentationModel<Produto> implements Serializable {
 
     private static final long serialVersionUID = 1l;
 
